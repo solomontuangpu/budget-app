@@ -3,6 +3,7 @@ import { useLoaderData, Outlet } from "react-router-dom";
 import { fetchData } from "../helper";
 
 import wave from "../assets/wave.svg";
+import Nav from "../components/Nav";
 
 export const mainLoader = () => {
   const userName = fetchData("userName");
@@ -14,7 +15,7 @@ const Main = () => {
 
   return (
     <div className=" layout">
-      <h1>Nav</h1>
+        <Nav userName={userName} />
       <main>
         <Outlet />
       </main>

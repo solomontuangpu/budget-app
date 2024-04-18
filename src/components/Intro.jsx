@@ -12,6 +12,8 @@ const Intro = () => {
             <p>Personal budgeting is the secret to freedom. Start your journey today.</p>
             <Form method="post">
                 <input type="text" name="userName" required placeholder="What is your name?" aria-label="Your name" autoComplete="given-name" />
+
+                <input type="hidden" name="_action" value="createAccount" />
                 <button type="submit" className="btn btn--dark">
                     <span>Create Account</span>
                     <UserPlusIcon width={20} />

@@ -1,11 +1,18 @@
+//rrd imports
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Error from "./pages/Error"
-import Main, { mainLoader } from "./layout/main"
-import Dashboard, { dashboardAction, dashboardLoader } from "./pages/Dashboard"
+
+//helpers
 import { logoutAction } from "./actions/logout"
 
+// library imports
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+// import components
+import Main, { mainLoader } from "./layout/main"
+import Error from "./pages/Error"
+import Dashboard, { dashboardAction, dashboardLoader } from "./pages/Dashboard"
+import ExpensesPage, { expensesLoader } from "./pages/ExpensesPage"
 
 const router = createBrowserRouter([
   {
@@ -19,15 +26,21 @@ const router = createBrowserRouter([
         element: <Dashboard />,
         loader: dashboardLoader,
         action: dashboardAction,
-        errorElement: <Error />
+        errorElement: <Error />,
+      },
+      {
+        path: "expenses",
+        element: <ExpensesPage />,
+        loader: expensesLoader,
+        errorElement: <Error />,
       },
       {
         path: "logout",
-        action: logoutAction
-      }
-    ]
+        action: logoutAction,
+      },
+    ],
   },
-])
+]);
 
 function App() {
  

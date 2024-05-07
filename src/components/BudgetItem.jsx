@@ -1,4 +1,4 @@
-import React from 'react'
+// helpers
 import { calculateSpentByBudget, formatCurrency, formatPercentage } from '../helper';
 
 const BudgetItem = ({budget}) => {
@@ -23,7 +23,7 @@ const BudgetItem = ({budget}) => {
 
       <div className='progress-text'>
         <small>{formatCurrency(spent)} spent</small>
-        <small>...remaining</small>
+        <small>{formatCurrency(amount - spent)} remaining</small>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from 'react'
+// helper
 import { formatCurrency, formatDateToLocalString } from '../helper'
 
 const ExpenseItem = ({expense}) => {

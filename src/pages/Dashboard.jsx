@@ -1,9 +1,16 @@
+//  rrd imports
+import { Link, useLoaderData } from "react-router-dom";
+
+// library imports
+import { toast } from "react-toastify";
+
+// helpers
+import { addExpense, createBudget, fetchData, wait } from "../helper";
+
+// component imports 
 import Intro from "../components/Intro";
 import AddBudgetForm from "../components/AddBudgetForm";
 import AddExpenseForm from "../components/AddExpenseForm";
-import { addExpense, createBudget, fetchData, wait } from "../helper";
-import { useLoaderData } from "react-router-dom";
-import { toast } from "react-toastify";
 import BudgetItem from "../components/BudgetItem";
 import Table from "../components/Table";
 
@@ -89,8 +96,16 @@ const Dashboard = () => {
                     <div className="grid-md">
                       <h2>Recent Expenses</h2>
                       <Table expenses = {
-                        expenses.sort((a,b) => b.createdAt - a.createdAt)
+                        expenses.sort((a,b) => b.createdAt - a.createdAt).slice(0, 5)
                       } />
+
+                      {
+                        expenses.length > 5 && (
+                          <Link to="expenses" className="btn btn--dark">
+                              View all expenses
+                          </Link>
+                        )
+                      }
                     </div>
                   )
                 }

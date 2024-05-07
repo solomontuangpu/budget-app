@@ -1,8 +1,13 @@
+// rrd
 import { useLoaderData, Outlet } from "react-router-dom";
 
+// helper
 import { fetchData } from "../helper";
 
+// images
 import wave from "../assets/wave.svg";
+
+// components
 import Nav from "../components/Nav";
 
 export const mainLoader = () => {

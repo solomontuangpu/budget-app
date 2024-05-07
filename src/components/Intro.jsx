@@ -1,7 +1,11 @@
+
+// rrd 
 import { Form } from "react-router-dom"
 
+// icon import
 import { UserPlusIcon } from "@heroicons/react/24/solid";
 
+// images
 import illustration from "../assets/illustration.jpg"
 
 const Intro = () => {

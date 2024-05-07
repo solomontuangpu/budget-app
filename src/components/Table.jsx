@@ -1,4 +1,4 @@
-import React from "react";
+// components
 import ExpenseItem from "./ExpenseItem";
 
 const Table = ({ expenses }) => {

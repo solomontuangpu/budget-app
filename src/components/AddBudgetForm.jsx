@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 // rrd import
 import { useFetcher } from "react-router-dom";
 
-// icon import
+// icon import 
 import { CurrencyDollarIcon } from "@heroicons/react/24/solid"
 
 const AddBudgetForm = () => {

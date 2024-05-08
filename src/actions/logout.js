@@ -5,9 +5,9 @@ import { toast } from "react-toastify";
 import { deleteItem } from "../helper";
 
 export const logoutAction = async () => {
-     deleteItem("userName");
-     deleteItem("budgets");
-     deleteItem("expenses");
+     deleteItem({key: "userName"});
+     deleteItem({ key: "budgets" });
+     deleteItem({ key: "expenses" });
      toast.success("You've deleted your account successfully!");
     return redirect("/");
 }

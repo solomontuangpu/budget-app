@@ -1,4 +1,4 @@
-# React + Vite
+# Budgeting App
 
 ![](./public/screenshot.png)
 
